@@ -1,7 +1,25 @@
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
+- [Maze Generator](#maze-generator)
+   * [Algorithm Overview](#algorithm-overview)
+   * [Easy Code Explanation](#easy-code-explanation)
+      + [Initialization](#initialization)
+      + [Drawing Functions](#drawing-functions)
+      + [Maze Generation](#maze-generation)
+      + [Path Existence Checking](#path-existence-checking)
+      + [Main Loop](#main-loop)
+   * [Dependencies](#dependencies)
+   * [Advanced Code Explanation](#advanced-code-explanation)
+   * [Usage](#usage)
+
+<!-- TOC end -->
+
+
+<!-- TOC --><a name="maze-generator"></a>
 # Maze Generator
 This Python script generates a maze using the recursive backtracking algorithm. It utilizes the Turtle module for visualization. The maze consists of cells represented by squares, with passages connecting adjacent cells. The algorithm ensures that there is a clear path from the starting point to the ending point within the maze.
 
+<!-- TOC --><a name="algorithm-overview"></a>
 ## Algorithm Overview
 The maze generation algorithm used in this script is recursive backtracking. It works as follows:
 
@@ -13,26 +31,34 @@ The maze generation algorithm used in this script is recursive backtracking. It 
 6. Continue this process until all cells have been visited.
 This algorithm ensures that the maze is fully connected, meaning there is a path between any two cells.
 
+<!-- TOC --><a name="easy-code-explanation"></a>
 ## Easy Code Explanation
+<!-- TOC --><a name="initialization"></a>
 ### Initialization
 - The script initializes the Turtle screen with dimensions 600x600 pixels.
 - It sets the cell size to 20 pixels and calculates the number of cells based on the screen dimensions.
 - The grid is initialized as a 2D list with all cells initially set to 0, representing unvisited cells.
+<!-- TOC --><a name="drawing-functions"></a>
 ### Drawing Functions
 - draw_cell(x, y): Draws a cell at the given position (x, y) on the screen.
 - draw_start_end(): Draws the start and end points of the maze. It checks if there is a path from the start point to the end point using the path_exists() function.
+<!-- TOC --><a name="maze-generation"></a>
 ### Maze Generation
 - generate_maze(x, y): Implements the recursive backtracking algorithm to generate the maze. It starts from the given position (x, y) and explores neighboring cells recursively.
 - find_start_position(): Finds a suitable starting position for maze generation. It ensures that there is a clear path from the starting point to the ending point.
+<!-- TOC --><a name="path-existence-checking"></a>
 ### Path Existence Checking
 - path_exists(x, y): Checks if there is a path from the given position (x, y) to the end of the maze. It uses depth-first search (DFS) to explore possible paths.
+<!-- TOC --><a name="main-loop"></a>
 ### Main Loop
 - The script continuously generates mazes until it finds a valid maze where there is a path from the starting point to the ending point.
 - Once a valid maze is generated, it draws the start and end points and displays the maze on the screen.
+<!-- TOC --><a name="dependencies"></a>
 ## Dependencies
 - Python 3.x
 - Turtle module (standard library)
 
+<!-- TOC --><a name="advanced-code-explanation"></a>
 ## Advanced Code Explanation
 
 First, for our `path_exists()` function:
@@ -107,6 +133,7 @@ F() = \begin{cases}
 
 Where \( F \) is the function described above. The functions \( \text{generate\_maze} \) and \( \text{path\_exists} \) are assumed to be defined elsewhere.
 
+<!-- TOC --><a name="usage"></a>
 ## Usage
 1. Make sure Python is installed on your system.
 2. Run the script in a Python environment.
